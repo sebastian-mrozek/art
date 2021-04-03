@@ -7,7 +7,7 @@ let WIDTH = 800,
   BACKGROUND_COLOR = "#000f",
   FOREGROUND_COLOR = "#ffff";
 
-let START = 1,
+const START = 1,
   MIDDLE = 0,
   END = -1;
 
@@ -25,7 +25,7 @@ function setup() {
 function calculateCanvasSize() {
   WIDTH = windowWidth * 0.9;
   HEIGHT = windowHeight * 0.8;
-  ONE = Math.min(WIDTH, HEIGHT) / 10;
+  ONE = Math.min(WIDTH, HEIGHT) / 12;
   HALF = ONE / 2;
 }
 
