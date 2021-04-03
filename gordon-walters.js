@@ -11,9 +11,11 @@ let START = 1,
   MIDDLE = 0,
   END = -1;
 
+const LIGHT = 1,
+  DARK = 0;
+
 function setup() {
   calculateCanvasSize();
-  randomizeColors();
   createCanvas(WIDTH, HEIGHT);
   noStroke();
   // noLoop();
@@ -23,6 +25,8 @@ function setup() {
 function calculateCanvasSize() {
   WIDTH = windowWidth * 0.9;
   HEIGHT = windowHeight * 0.8;
+  ONE = Math.min(WIDTH, HEIGHT) / 10;
+  HALF = ONE / 2;
 }
 
 function randomizeColors() {
@@ -112,9 +116,6 @@ function isEven(i) {
 function randomInt(from, to) {
   return round(random(from, to));
 }
-
-const LIGHT = 1,
-  DARK = 0;
 
 function getRandomColor(mode) {
   let color = "#";
